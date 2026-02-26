@@ -8,6 +8,8 @@ import Comentarios from "./Comentarios";
 import Sucursales from "./Sucursales";
 import Acerca from "./Acerca";
 import Jugadores from "./Jugadores";
+import Favoritos from "./Favoritos.jsx";
+import Usuario from "./UsuariosTabla.jsx";
 
 function App(){
 
@@ -40,6 +42,9 @@ function App(){
 
       {seccion === "Jugadores" && <Jugadores />}
 
+      {seccion === "favoritos" && <Favoritos />}
+
+      {seccion === "usuarios" && <Usuario />}
 
     </>
   );

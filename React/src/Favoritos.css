@@ -1,0 +1,85 @@
+.favoritos-container{
+  padding: 40px;
+  background: #000;
+  min-height: 100vh;
+  color: rgb(138, 135, 135);
+}
+
+.favoritos-title{
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #ff2e63; /* cambié a un tono más tipo "favorito" */
+}
+
+/* GRID */
+.favoritos-cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.favorito-card{
+  background: linear-gradient(145deg, #cdcdcd, #5b5a5a);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(92, 94, 93, 0.15);
+  box-shadow: 0 8px 20px rgba(136, 136, 136, 0.6);
+  transition: 0.3s ease;
+}
+
+.favorito-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(109, 113, 111, 0.15);
+}
+
+/* HEADER */
+.favorito-header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.favorito-id{
+  color: #ff2e63;
+}
+
+.favorito-fecha{
+  color: #656565;
+  font-size: 13px;
+}
+
+/* BODY */
+.favorito-body h4{
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #6f6d6d;
+}
+
+.favorito-body ul{
+  padding-left: 18px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.favorito-body li{
+  margin-bottom: 6px;
+}
+
+/* BOTÓN */
+.favorito-btn{
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #ff2e63;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.favorito-btn:hover{
+  background: #cc1f4a;
+}

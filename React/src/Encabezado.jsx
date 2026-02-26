@@ -31,9 +31,11 @@ function Menu({ onCambiar }){
                 <li><button onClick={() => onCambiar("inicio")}>Inicio</button></li>
                 <li><button onClick={() => onCambiar("acerca")}>Acerca de</button></li>
                 <li><button onClick={() => onCambiar("productos")}>Productos</button></li>
-                <li><button onClick={() => onCambiar("comentarios")}>Comentarios</button></li>
-                <li><button onClick={() => onCambiar("sucursales")}>Sucursales</button></li>
+                <li><button onClick={() => onCambiar("favoritos")}>Favoritos</button></li>
                 <li><button onClick={() => onCambiar("Jugadores")}>Jugadores</button></li>
+                <li><button onClick={() => onCambiar("sucursales")}>Sucursales</button></li>
+                <li><button onClick={() => onCambiar("usuarios")}>Usuarios</button></li>
+                <li><button onClick={() => onCambiar("comentarios")}>Comentarios</button></li>
             </ul>
             <Clima />
         </div>    
