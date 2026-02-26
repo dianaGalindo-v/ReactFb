@@ -4,15 +4,10 @@ import ContenedorTarjetas from './ContenedorTarjetas';
 import Footer from './Footer';
 import BannerSuave from './BannerSuave';
 import Productos from "./Productos";
-import Contactos from "./Contactos";
+import Comentarios from "./Comentarios";
 import Sucursales from "./Sucursales";
 import Acerca from "./Acerca";
 import Jugadores from "./Jugadores";
-
-
-
-
-
 
 function App(){
 
@@ -38,7 +33,7 @@ function App(){
       {seccion === "productos" && <Productos />}
 
 
-      {seccion === "contacto" && <Contactos />}
+      {seccion === "comentarios" && <Comentarios />}
 
 
       {seccion === "sucursales" && <Sucursales />}

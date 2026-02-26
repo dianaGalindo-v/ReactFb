@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./Contactos.css";
+import "./Comentarios.css";
 
-function Contactos(){
+function Comentarios(){
 
   const [enviado, setEnviado] = useState(false);
 
@@ -22,7 +22,7 @@ function Contactos(){
     <div className="contacto-container">
 
       <h1 className="contacto-titulo">
-        ¿Dudas o sugerencias?
+        ¿Dudas, comentarios o sugerencias?
       </h1>
 
       <p className="contacto-sub">
@@ -65,4 +65,4 @@ function Contactos(){
   );
 }
 
-export default Contactos;
+export default Comentarios;
