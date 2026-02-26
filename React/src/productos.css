@@ -1,7 +1,7 @@
 /* CONTENEDOR GENERAL */
 .ProductosDiv {
   padding: 30px 40px;
-  background: radial-gradient(circle at top, #0a1a3a, #020617);
+  background: radial-gradient(circle at top, #f61616, #600707);
   min-height: 100vh;
 }
 
@@ -29,7 +29,7 @@
   border-radius: 16px;
   overflow: hidden;
   cursor: pointer;
-  background: #0b1430;
+  background: #fb0b0b;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 

@@ -2,9 +2,9 @@
   max-width: 700px;
   margin: 40px auto;
   padding: 30px;
-  background: #0b1430;
+  background: #f74545;
   border-radius: 18px;
-  box-shadow: 0 0 25px rgba(0,70,255,.4);
+  box-shadow: 0 0 25px rgba(246, 40, 40, 0.4);
   text-align: center;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .contacto-sub{
-  color: #9bb0ff;
+  color: #000000;
   margin-bottom: 25px;
 }
 
@@ -31,7 +31,7 @@
   padding: 12px;
   border-radius: 10px;
   border: none;
-  background: #09102a;
+  background: #bc0606;
   color: white;
   font-size: 15px;
 }
@@ -39,7 +39,7 @@
 .contacto-form input:focus,
 .contacto-form textarea:focus{
   outline: none;
-  box-shadow: 0 0 8px rgba(70,120,255,.8);
+  box-shadow: 0 0 8px rgba(97, 9, 9, 0.8);
 }
 
 /* BOTON */
@@ -47,7 +47,7 @@
   padding: 12px;
   border-radius: 10px;
   border: none;
-  background: linear-gradient(90deg,#003cff,#1a7cff);
+  background: linear-gradient(90deg,#5b1207,#5b1207);
   color: white;
   font-weight: bold;
   cursor: pointer;

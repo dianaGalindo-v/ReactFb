@@ -1,5 +1,5 @@
 import "./Sucursales.css";
-import Clima from "./Clima"; // 👈 IMPORTANTE
+import Clima from "./Clima"; 
 
 import santiago from "./assets/santiago.jpg";
 import cap from "./assets/cap.jpg";

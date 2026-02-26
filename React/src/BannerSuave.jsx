@@ -6,7 +6,7 @@ function BannerSuave(){
     <div className="banner">
 
       <h2 className="banner-titulo">
-        Encuentra nuestra sede Champions ⚽
+        ReactFB "Sitio web de souvenirs y productos originles"⚽
       </h2>
 
       {/* MAPA */}

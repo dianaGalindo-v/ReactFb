@@ -1,14 +1,14 @@
 .favoritos-container{
   padding: 40px;
-  background: #000;
+  background: #ff1919;
   min-height: 100vh;
-  color: rgb(138, 135, 135);
+  color: rgb(0, 0, 0);
 }
 
 .favoritos-title{
   font-size: 32px;
   margin-bottom: 30px;
-  color: #ff2e63; /* cambié a un tono más tipo "favorito" */
+  color: #000000; /* cambié a un tono más tipo "favorito" */
 }
 
 /* GRID */
@@ -20,7 +20,7 @@
 
 /* CARD */
 .favorito-card{
-  background: linear-gradient(145deg, #cdcdcd, #5b5a5a);
+  background: linear-gradient(145deg, #fd1616, #2d0505);
   border-radius: 12px;
   padding: 20px;
   border: 1px solid rgba(92, 94, 93, 0.15);
@@ -30,7 +30,7 @@
 
 .favorito-card:hover{
   transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(109, 113, 111, 0.15);
+  box-shadow: 0 12px 25px rgba(230, 232, 231, 0.15);
 }
 
 /* HEADER */
@@ -46,7 +46,7 @@
 }
 
 .favorito-fecha{
-  color: #656565;
+  color: #000000;
   font-size: 13px;
 }
 

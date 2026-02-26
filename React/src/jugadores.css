@@ -1,6 +1,6 @@
 /* FONDO GENERAL */
 .jugadores-page{
-  background: #050b1f;
+  background: #670505;
   min-height: 100vh;
   padding-top: 20px;
 }
@@ -19,8 +19,8 @@
   border: none;
   outline: none;
   font-size: 14px;
-  background: #0b1430;
-  color: white;
+  background: #b70909;
+  color: rgb(16, 7, 7);
   box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 

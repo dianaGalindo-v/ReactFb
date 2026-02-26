@@ -35,7 +35,7 @@ function Favoritos() {
 
   return (
     <div className="favoritos-container">
-      <h1 className="favoritos-title">Mis Favoritos</h1>
+      <h1 className="favoritos-title">Mis Productos Favoritos</h1>
 
       {favoritos.length === 0 ? (
         <p>No hay favoritos disponibles.</p>
@@ -44,6 +44,13 @@ function Favoritos() {
           <div className="favorito-card" key={favorito.id}>
             <p>ID: {favorito.id}</p>
             <p>Fecha: {favorito.date}</p>
+            <p>Productos:
+                <ul>
+                    Balon Nike
+                    Jersey Real Madrid
+                    Tenis Nike
+                </ul>
+            </p>
           </div>
         ))
       )}

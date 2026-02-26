@@ -47,10 +47,10 @@
 }
 
 .acerca-card{
-  background:#0b1430;
+  background:#ff1111;
   padding: 25px;
   border-radius: 16px;
   width: 300px;
 
-  box-shadow: 0 0 18px rgba(60,100,255,.4);
+  box-shadow: 0 0 18px rgb(99, 9, 9);
 }

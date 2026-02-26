@@ -1,6 +1,6 @@
 .suc-container{
   padding: 40px;
-  background: radial-gradient(circle at top,#0a1435,#020617);
+  background: radial-gradient(circle at top,#f70808,#020617);
   min-height: 100vh;
 }
 
@@ -20,7 +20,7 @@
 
 /* CARD */
 .suc-card{
-  background:#09122b;
+  background:#fe0606;
   border-radius:18px;
   overflow:hidden;
   cursor:pointer;

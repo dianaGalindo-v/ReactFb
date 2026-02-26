@@ -1,6 +1,6 @@
 /* Fondo general estilo Champions */
 body{
-	background: linear-gradient(135deg,#0a0f2c,#0f1e5a,#1b3dbf);
+	background: linear-gradient(135deg,#f63434,#eb0e0e,#9c0303);
 	min-height: 100vh;
 	margin:0;
 	font-family: sans-serif; 
@@ -53,7 +53,7 @@ body{
 .tarjeta{
 	flex: 0 0 260px;          /* tamaño fijo controlado */
 	max-width: 260px;
-	background: linear-gradient(180deg,#1b3dbf,#0a0f2c);
+	background: linear-gradient(180deg,#f42323,#0a0f2c);
 	color: white;
 	border-radius: 12px;
 	box-shadow: 0 6px 16px rgba(0,0,0,0.35);
