@@ -13,27 +13,27 @@ function ContenedorTarjetas(){
                     <div className="tarjetas">
 
                         <Tarjeta 
-                            img={moh}
-                            titulo="Mohamed Salah"
-                            texto="Extremo veloz con gran definición"
+                            /*img={}*/
+                            titulo="..."
+                            texto="..."
                         />
 
                         <Tarjeta 
-                            img={vir}
-                            titulo="Virgil vandijk"
-                            texto="Descripción ejemplo"
+                            /*img={}*/
+                            titulo="..."
+                            texto="..."
                         />
 
                         <Tarjeta 
-                            img={flo}
-                            titulo="florian wirtz"
-                            texto="Descripción ejemplo"
+                            /*img={flo}*/
+                            titulo="..."
+                            texto="..."
                         />
 
                         <Tarjeta 
-                            img={szo}
-                            titulo="szoboslai"
-                            texto="Descripción ejemplo"
+                            /*img={szo}*/
+                            titulo="..."
+                            texto="..."
                         />
 
                     </div>
