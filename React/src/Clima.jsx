@@ -7,7 +7,7 @@ function Clima({ lat, lng }) {
   const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 
   useEffect(() => {
-    if (!lat || !lng) return;
+    if (!lat || !lng || !API_KEY) return;
 
     const obtenerClima = async () => {
       try {
@@ -15,7 +15,13 @@ function Clima({ lat, lng }) {
           `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric&lang=es`
         );
         const data = await res.json();
-        setClima(data);
+
+        // 🔥 Validación para que no truene
+        if (data && data.main && data.weather) {
+          setClima(data);
+        } else {
+          console.error("Respuesta inválida del clima:", data);
+        }
       } catch (error) {
         console.error("Error clima:", error);
       }
@@ -24,7 +30,13 @@ function Clima({ lat, lng }) {
     obtenerClima();
   }, [lat, lng, API_KEY]);
 
-  if (!clima) return <p className="clima-loading">Cargando clima...</p>;
+  if (!API_KEY) {
+    return <p className="clima-loading">⚠ Sin API del clima</p>;
+  }
+
+  if (!clima) {
+    return <p className="clima-loading">Cargando clima...</p>;
+  }
 
   return (
     <div className="clima-card">

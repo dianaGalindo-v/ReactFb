@@ -14,16 +14,15 @@ function Acerca(){
 
       <div className="acerca-texto">
         <p>
-          Esta aplicación fue creada como una experiencia digital inspirada
-          en la emoción y grandeza de la UEFA Champions League. Su objetivo
-          es mostrar contenido interactivo sobre productos, sedes y contacto,
-          aplicando tecnologías modernas como React y diseño responsivo.
+          Nuestro sitio web es una plataforma dedicada a la venta de artículos deportivos, especializada en productos de fútbol como jerseys oficiales de equipos nacionales e internacionales, balones profesionales, tacos (botines) y accesorios deportivos.
         </p>
 
         <p>
-          Más que una web, es un proyecto de desarrollo que combina
-          creatividad, programación y pasión por el fútbol europeo,
-          simulando una plataforma oficial con navegación dinámica.
+          Ofrecemos productos originales y de alta calidad, diseñados para brindar comodidad, rendimiento y estilo tanto a jugadores como a aficionados del deporte. Nuestro objetivo es crear un espacio digital donde los amantes del fútbol puedan encontrar fácilmente todo lo que necesitan en un solo lugar, con una experiencia de compra rápida, segura y confiable.
+        </p>
+
+        <p>
+          Nos enfocamos en ofrecer una navegación intuitiva, información clara de los productos y un catálogo actualizado que refleje las últimas tendencias y equipos más populares.
         </p>
       </div>
 
@@ -32,17 +31,14 @@ function Acerca(){
         <div className="acerca-card">
           <h2>Misión</h2>
           <p>
-            Desarrollar interfaces modernas que transmitan la emoción
-            del deporte y permitan practicar tecnologías frontend
-            profesionales.
+            Brindar a los aficionados y deportistas productos deportivos originales y de calidad, promoviendo la pasión por el fútbol a través de una plataforma accesible, segura y eficiente que garantice una excelente experiencia de compra.
           </p>
         </div>
 
         <div className="acerca-card">
           <h2>Visión</h2>
           <p>
-            Evolucionar esta plataforma hacia una experiencia completa
-            con datos reales, animaciones avanzadas y backend conectado.
+            Convertirnos en una tienda en línea reconocida a nivel nacional por nuestra variedad de productos deportivos, calidad, confianza y compromiso con nuestros clientes, posicionándonos como una de las principales opciones para los amantes del fútbol.
           </p>
         </div>
 
