@@ -1,67 +1,101 @@
 h2{
     color: rgb(225, 163, 253);
 }
+
 h1{
     color: rgb(228, 139, 250);
 }
+
+/* ===== NAVBAR ===== */
 .Encabezado{
     background-color: rgb(255, 34, 34);
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+    padding: 20px 5%;
 }
+
+/* ===== LOGO ===== */
 .LogoDiv{
-    width: 20%;
-    background-color: rgb(255, 34, 34);
-    justify-content: center;
-    align-items: flex-start;
     display: flex;
+    align-items: center;
 }
+
 .LogoDiv img{
-    width: 100px;
-    display: block;
+    width: 90px;
 }
+
+/* ===== MENU ===== */
 .MenuDiv{
-    width: 60%;
-    background-color: rgb(255, 34, 34);
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
 }
+
 .MenuDiv ul{
     list-style: none;
     display: flex;
-    gap: 20px;
-    font-size: 20px;
-    font-weight: bold;
+    gap: 60px;
+    padding: 0;
+    margin: 0;
 }
+
+.MenuDiv li{
+    list-style: none;
+}
+
 .MenuDiv a{
     text-decoration: none;
-    color: black;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    padding: 0;              
+    border-radius: 0;        
+    transition: opacity 0.3s ease;
 }
-.MenuDiv ul li a:hover{
-    padding: 10px;
-    background-color: #b40505;
-    border-radius: 15px;
+
+.MenuDiv a:hover{
+    opacity: 0.7;          
 }
+/* Quitamos estilo nativo del botón */
+.MenuDiv button {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover elegante tipo menú gris */
+.MenuDiv button:hover {
+    opacity: 0.7;
+}
+/* ===== REDES ===== */
 .RedesDiv{
-    width: 20%;
-    background-color: transparent;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-start;
-    
+    align-items: center;
+    gap: 15px;
 }
+
 .RedesDiv ul{
     list-style: none;
     display: flex;
-    gap: 10px;
-    padding: 50px;
-    margin: 20px;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
 }
+
 .RedesDiv img{
-    width: 50px;
-    height: auto;
-    display: block;
+    width: 32px;
+    transition: transform 0.3s ease;
+}
+
+.RedesDiv img:hover{
+    transform: scale(1.1);
 }

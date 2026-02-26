@@ -1,8 +1,8 @@
 import './ContenedorTarjetas.css';
-import moh from './assets/moh.jpg';
-import vir from './assets/vir.jpg';
-import flo from './assets/flo.jpg';
-import szo from './assets/szo.jpg';
+import live from './assets/live.jpg';
+import taco2 from './assets/taco2.jpg';
+import balo from './assets/balo.jpg';
+import man from './assets/man.jpg';
 
 function ContenedorTarjetas(){
     return(
@@ -13,27 +13,27 @@ function ContenedorTarjetas(){
                     <div className="tarjetas">
 
                         <Tarjeta 
-                            /*img={}*/
-                            titulo="..."
-                            texto="..."
+                            img={live}
+                            titulo="Liverpool"
+                            texto="Jersey Rojo"
                         />
 
                         <Tarjeta 
-                            /*img={}*/
-                            titulo="..."
-                            texto="..."
+                            img={taco2}
+                            titulo="NIKE C"
+                            texto="Tacos"
                         />
 
                         <Tarjeta 
-                            /*img={flo}*/
-                            titulo="..."
-                            texto="..."
+                            img={balo}
+                            titulo="Nike Balón"
+                            texto="Balón"
                         />
 
                         <Tarjeta 
-                            /*img={szo}*/
-                            titulo="..."
-                            texto="..."
+                            img={man}
+                            titulo="Liverpool"
+                            texto="Jersey Azul"
                         />
 
                     </div>
