@@ -11,7 +11,7 @@ function Galeria() {
     return (
         <div className="vista">
             <h2>Galería</h2>
-            <p>Nuestros bolsos en diferentes estilos y momentos.</p>
+            <p>Echa un vistazo a nuestros productos</p>
 
             <div className="galeriaGrid">
                 <div className="foto">

@@ -39,8 +39,7 @@ function Sucursales() {
             <h2 className="tituloSucursales">Nuestras Sucursales</h2>
 
             <p className="introSucursales">
-                Visítanos y vive la experiencia de nuestra colección en persona.
-                Descubre nuestros diseños exclusivos y recibe asesoría personalizada.
+                Visítanos y descubre nuestros diseños exclusivos.
             </p>
 
             <div className="sucursalesGrid">
