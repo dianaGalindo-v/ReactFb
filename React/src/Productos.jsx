@@ -163,9 +163,18 @@ function Productos() {
 
                         <p className="precio">${producto.precio}</p>
 
-                        <p className="stock">Stock: {producto.stock}</p>
+                        <div style={{
+                            fontSize: '12px',
+                            color: producto.stock > 0 ? '#666' : '#9a0404',
+                            fontWeight: '600',
+                            marginBottom: '15px',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.5px'
+                        }}>
+                            {producto.stock > 0 ? `✓ ${producto.stock} disponibles` : '❌ Sin stock'}
+                        </div>
 
-                                        <div className="productoBotones">
+                        <div className="productoBotones">
 
                                 {!isAdmin && (
                                   <button

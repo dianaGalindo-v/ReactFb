@@ -28,39 +28,30 @@ function Categorias() {
     }
   };
 
-  if (cargando) return <div style={{ padding: "40px" }}>⏳ Cargando categorías...</div>;
-  if (error) return <div style={{ padding: "40px" }}>❌ {error}</div>;
+  if (cargando) return <div className="categorias-loading">⏳ Cargando categorías...</div>;
+  if (error) return <div className="categorias-error">❌ {error}</div>;
 
   return (
 
-    <div style={{ padding: "40px" }}>
+    <div className="categorias-container">
 
-      <h2>Categorías de Productos</h2>
+      <h2 className="categorias-title">Categorías de Productos</h2>
 
-      <div style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(200px,1fr))",
-        gap: "20px",
-        marginTop: "20px"
-      }}>
+      <div className="categorias-grid">
 
         {categorias.map((cat) => (
 
-          <div key={cat.id}
-            style={{
-              border: "1px solid #ddd",
-              borderRadius: "10px",
-              padding: "15px",
-              textAlign: "center",
-              boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
-            }}
-          >
+          <div key={cat.id} className="categoria-card">
 
-            <h3>{cat.nombre}</h3>
+            <div className="categoria-icon">📦</div>
 
-            <p style={{ fontSize: "14px", color: "#666" }}>
-              ID: {cat.id}
-            </p>
+            <h3 className="categoria-nombre">{cat.nombre}</h3>
+
+            <p className="categoria-id">ID: {cat.id}</p>
+
+            <button className="categoria-btn">
+              Ver productos
+            </button>
 
           </div>
 

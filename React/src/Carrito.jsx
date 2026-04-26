@@ -18,7 +18,6 @@ function Carrito() {
       if (carritos.length === 0) return;
       const carrito = carritos[0];
 
-      // Eliminar todos los detalles del carrito
       if (carrito.detalles && carrito.detalles.length > 0) {
         await Promise.all(
           carrito.detalles.map((detalle) =>
@@ -27,7 +26,6 @@ function Carrito() {
         );
       }
 
-      // Actualizar el total a 0
       await carritosAPI.actualizar(carrito.id, {
         total: 0,
         estado: carrito.estado,
@@ -79,77 +77,98 @@ function Carrito() {
 
   if (cargando) return <p>Cargando carritos.......</p>;
 
+  if (!isLoggedIn) {
+    return (
+      <div className="carrito-container">
+        <h1 className="carrito-title">Carrito de compras</h1>
+        <p>Por favor inicia sesión para ver tu carrito.</p>
+      </div>
+    );
+  }
+
+  const carrito = carritos.length > 0 ? carritos[0] : null;
+
   return (
 
-    <div className="carritos">
+    <div className="carrito-container">
 
-      <h1>Carrito de compras</h1>
+      <h1 className="carrito-title">Carrito de compras</h1>
 
-      {carritos.length === 0 ? (
+      {!carrito || !carrito.detalles || carrito.detalles.length === 0 ? (
         <p>No hay productos en el carrito.</p>
       ) : (
-        carritos.map((carrito) => (
-          <div className="carrito-card" key={carrito.id}>
+        <>
+          <div className="carrito-cards">
+            {carrito.detalles.map((detalle, idx) => {
+              const producto = detalle.producto;
+              const rating = 4.5;
+              const reviews = Math.floor(Math.random() * 100) + 10;
 
-            <div className="carrito-id">
-              ID Pedido: {carrito.id}
+              return (
+                <div className="carrito-card" key={idx}>
+                  
+                  <div className="producto-imagen">
+                    {producto?.imagen ? (
+                      <img
+                        src={producto.imagen}
+                        alt={producto?.nombre || 'Producto'}
+                      />
+                    ) : (
+                      <div style={{ color: '#999', fontSize: '14px' }}>
+                        Sin imagen
+                      </div>
+                    )}
+                    <span className="categoria-badge">
+                      {producto?.categoria || 'Otros'}
+                    </span>
+                  </div>
+
+                  <div className="card-body">
+                    <h4>{producto?.nombre || 'Producto sin nombre'}</h4>
+                    
+                    <div className="producto-rating">
+                      <span className="estrellas">★★★★★</span>
+                      <span>({reviews} Reviews)</span>
+                    </div>
+
+                    <div className="producto-precio">
+                      ${producto?.precio || 0}
+                    </div>
+
+                    <p style={{ fontSize: '13px', color: '#666', margin: '8px 0' }}>
+                      Cantidad: <strong>{detalle.cantidad}</strong>
+                    </p>
+
+                    <div className="carrito-botones">
+                      <button className="carrito-btn">
+                        Quitar del carrito
+                      </button>
+                      <button className="carrito-btn">
+                        Comprar ahora
+                      </button>
+                    </div>
+                  </div>
+
+                </div>
+              );
+            })}
+          </div>
+
+          <div style={{ marginTop: '40px', textAlign: 'center' }}>
+            <div style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '20px' }}>
+              Total del carrito: ${carrito.total}
             </div>
-
-            <div className="carrito-fecha">
-              {new Date(carrito.fecha_creacion).toLocaleDateString()}
-            </div>
-
-            <div className="carrito-productos-titulo">
-              Productos
-            </div>
-
-            <ul>
-              {carrito.detalles && carrito.detalles.length > 0 ? (
-                carrito.detalles.map((detalle, idx) => {
-                  const producto = detalle.producto;
-
-                  return (
-                    <li key={idx} className="carrito-producto">
-                      {producto ? (
-                        <div className="producto-info">
-                          {producto.imagen && (
-                            <img
-                              src={producto.imagen}
-                              alt={producto.nombre}
-                              width="50"
-                            />
-                          )}
-                          <span>{producto.nombre}</span>
-                          <span>${producto.precio}</span>
-                          <span>Cantidad: {detalle.cantidad}</span>
-                        </div>
-                      ) : (
-                        <span>Cargando producto...</span>
-                      )}
-                    </li>
-                  );
-                })
-              ) : (
-                <li>No hay productos agregados aún.</li>
-              )}
-            </ul>
-
-            <div className="carrito-total">
-              Total: ${carrito.total}
-            </div>
-
-            <button className="comprar" disabled>
-              Comprar
-            </button>
-
             {isClient && (
-              <button className="limpiar-carrito" onClick={limpiarCarrito}>
-                Limpiar carrito
+              <button 
+                className="carrito-btn"
+                onClick={limpiarCarrito}
+                style={{ maxWidth: '300px', padding: '12px 20px', fontSize: '16px' }}
+              >
+                Limpiar carrito completo
               </button>
             )}
-
           </div>
-        ))
+        </>
       )}
 
     </div>

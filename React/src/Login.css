@@ -1,88 +1,120 @@
 .login {
   --main-bg: #ffffff;
-  --header-gray: #c0bebe;
+  --accent-wine: #9a0404;
+  --accent-wine-dark: #620101;
   --text-dark: #222;
   --text-muted: #666;
-  --border-soft: #831414;
+  --border-soft: #e8d0d0;
 
   width: 100%;
   max-width: 420px;
   margin: 40px auto;
-  padding: 28px;
-  border-radius: 14px;
-
+  padding: 40px 35px;
+  border-radius: 12px;
   background: var(--main-bg);
   border: 1px solid var(--border-soft);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 25px rgba(154, 4, 4, 0.12);
+  font-family: 'Poppins', sans-serif;
 }
 
 .login__titulo {
   text-align: center;
-  margin-bottom: 20px;
-  font-family: 'Poppins', sans-serif;
-  color: var(--border-soft); /* vino */
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent-wine);
+  letter-spacing: 0.5px;
 }
 
 .login__form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .login__form label {
-  font-size: 14px;
-  color: var(--text-dark);
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .login__form input {
-  padding: 10px;
+  padding: 12px 14px;
   border-radius: 8px;
-  border: 1px solid var(--border-soft);
+  border: 1.5px solid var(--border-soft);
+  background: #faf8f8;
+  font-size: 14px;
+  color: var(--text-dark);
+  font-family: 'Poppins', sans-serif;
   outline: none;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+}
+
+.login__form input::placeholder {
+  color: #999;
 }
 
 .login__form input:focus {
-  border-color: var(--header-gray);
-  box-shadow: 0 0 0 2px rgba(192,190,190,0.3);
+  border-color: var(--accent-wine);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(154, 4, 4, 0.1);
 }
 
 .login__btn {
-  margin-top: 10px;
-  padding: 10px;
+  margin-top: 8px;
+  padding: 13px 15px;
   border-radius: 8px;
   border: none;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 14px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
 }
 
-/* BOTÓN ACCEDER (vino fuerte) */
+/* BOTÓN ACCEDER (vino) */
 .login__btn--acceder {
-  background-color: var(--border-soft);
+  background: linear-gradient(135deg, var(--accent-wine), var(--accent-wine-dark));
   color: white;
+  box-shadow: 0 4px 12px rgba(154, 4, 4, 0.2);
 }
 
 .login__btn--acceder:hover {
-  background-color: #5e0f0f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(154, 4, 4, 0.25);
+}
+
+.login__btn--acceder:active {
+  transform: translateY(0);
 }
 
 .login__extra {
-  margin-top: 12px;
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
-/* BOTÓN CREAR CUENTA (vino tenue) */
+/* BOTÓN CREAR CUENTA (secundario) */
 .login__btn--secundario {
-  background-color: #f5dede;
-  color: #831414;
-  border: 1px solid #e0b4b4;
+  background-color: #faf5f5;
+  color: var(--accent-wine);
+  border: 1.5px solid var(--accent-wine);
+  box-shadow: 0 2px 8px rgba(154, 4, 4, 0.08);
 }
 
 .login__btn--secundario:hover {
-  background-color: #ebcaca;
+  background-color: var(--accent-wine);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(154, 4, 4, 0.2);
+}
+
+.login__btn--secundario:active {
+  transform: translateY(0);
 }
 
 .loginContainer {
