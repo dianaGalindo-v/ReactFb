@@ -1,8 +1,11 @@
 import './Galeria.css';
-import lookUrbano from './assets/lookUrbano.jpeg';
-import elegante from './assets/elegante.jpeg';
-import minimal from './assets/minimal.jpeg';
-
+import hoddie from './assets/hoddie.jpg';
+import termo from './assets/termo.jpg';
+import tacoNike from './assets/tacoNike.jpg';
+import jerseyL from './assets/jerseyL.jpg';
+import espinillera from './assets/espinillera.jpg';
+import balonN from './assets/balonN.jpg';
+import calcetaD from './assets/calcetaD.jpg';
 
 function Galeria() {
     return (
@@ -12,18 +15,33 @@ function Galeria() {
 
             <div className="galeriaGrid">
                 <div className="foto">
-                    <img src={lookUrbano} alt="Look urbano" />
-                    <span>Look urbano</span>
+                    <img src={jerseyL} alt="Jersey Liverpool" />
+                    <span>Jersey Liverpool</span>
                 </div>
 
                 <div className="foto">
-                    <img src={elegante} alt="Estilo elegante" />
-                    <span>Estilo elegante</span>
+                    <img src={hoddie} alt="Hoddie Deportiva" />
+                    <span>Hoddie Deportiva</span>
                 </div>
 
                 <div className="foto">
-                    <img src={minimal} alt="Minimal aesthetic" />
-                    <span>Minimal aesthetic</span>
+                    <img src={balonN} alt="Balon adidas" />
+                    <span>Balon ft. Manchester United</span>
+                </div>
+
+                <div className="foto">
+                    <img src={termo} alt="Souvenirs" />
+                    <span>Termo Nike</span>
+                </div>
+
+                <div className="foto">
+                    <img src={tacoNike} alt="Tacos" />
+                    <span>Tacos Nike Black</span>
+                </div>
+
+                <div className="foto">
+                    <img src={espinillera} alt="Espinillera" />
+                    <span>Espinilleras Nike</span>
                 </div>
             </div>
         </div>

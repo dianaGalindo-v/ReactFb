@@ -1,7 +1,7 @@
 .footer{
     width: 100%;
     padding: 20px 0;
-    background-color: #999999;
+    background-color: rgb(101, 5, 5);
     text-align: center;
     margin-top: 60px;
 }
@@ -9,5 +9,5 @@
 .footer p{
     margin: 0;
     font-size: 0.9rem;
-    color: #000000;
+    color: #ffffff;
 }

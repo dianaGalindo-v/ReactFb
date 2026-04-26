@@ -3,7 +3,7 @@ import './Footer.css';
 function Footer() {
     return (
         <footer className="footer">
-            <p>© 2026 Maison Bag. Todos los derechos reservados.</p>
+            <p>© 2026 FutStyle. Todos los derechos reservados.</p>
         </footer>
     );
 }

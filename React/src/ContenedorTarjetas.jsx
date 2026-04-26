@@ -1,11 +1,11 @@
 import './ContenedorTarjetas.css';
 
 // imágenes
-import bandolera from './assets/bandolera.jpg';
-import wine from './assets/wine.jpg';
-import longvoyage from './assets/longvoyage.jpg';
-import jwpei from './assets/jwpei.jpg';
-import fondoBolso from './assets/fondo-bolso.jpg';
+import teniNegro from './assets/teniNegro.jpg';
+import jerseyL from './assets/jerseyL.jpg';
+import espinillera from './assets/espinillera.jpg';
+import balonA from './assets/balonA.jpg';
+import fondoAnfield from './assets/fondoAnfield.jpg';
 
 // vistas
 import Galeria from './Galeria';
@@ -44,16 +44,16 @@ function ContenedorTarjetas({ vista }) {
             {/* Fondo */}
             <div
                 className="fondoImagen"
-                style={{ backgroundImage: `url(${fondoBolso})` }}
+                style={{ backgroundImage: `url(${fondoAnfield})` }}
             ></div>
 
             {/* TARJETAS */}
             <div className="tarjetasWrapper">
                 <div className="tarjetas">
-                    <Tarjeta imagen={bandolera} titulo="Bandolera" texto="Diseño minimalista en tendencia" />
-                    <Tarjeta imagen={wine} titulo="Wine" texto="Ideal para ocasiones especiales" />
-                    <Tarjeta imagen={longvoyage} titulo="Longvoyage" texto="Espaciosa y elegante" />
-                    <Tarjeta imagen={jwpei} titulo="JW Pei" texto="Estilo urbano" />
+                    <Tarjeta imagen={teniNegro} titulo="Teniss Black" texto="Diseño deportivo y minimalista" />
+                    <Tarjeta imagen={jerseyL} titulo="Jersey Liverpool" texto="Jersey Premier League" />
+                    <Tarjeta imagen={espinillera} titulo="Espinillera Nike" texto="Diseño Black&White" />
+                    <Tarjeta imagen={balonA} titulo="Balon Adidas" texto="adidas ft. Manchester United" />
                 </div>
             </div>
         </div>

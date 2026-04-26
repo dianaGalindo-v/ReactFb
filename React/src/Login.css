@@ -3,7 +3,7 @@
   --header-gray: #c0bebe;
   --text-dark: #222;
   --text-muted: #666;
-  --border-soft: #d6d6d6;
+  --border-soft: #831414;
 
   width: 100%;
   max-width: 420px;
@@ -20,7 +20,7 @@
   text-align: center;
   margin-bottom: 20px;
   font-family: 'Poppins', sans-serif;
-  color: var(--text-dark);
+  color: var(--border-soft); /* vino */
 }
 
 .login__form {
@@ -57,13 +57,14 @@
   transition: all 0.2s ease;
 }
 
+/* BOTÓN ACCEDER (vino fuerte) */
 .login__btn--acceder {
-  background-color: #222;
+  background-color: var(--border-soft);
   color: white;
 }
 
 .login__btn--acceder:hover {
-  background-color: #444;
+  background-color: #5e0f0f;
 }
 
 .login__extra {
@@ -73,36 +74,38 @@
   gap: 8px;
 }
 
+/* BOTÓN CREAR CUENTA (vino tenue) */
 .login__btn--secundario {
-  background-color: #f2f2f2;
-  color: #222;
-  border: 1px solid #ddd;
+  background-color: #f5dede;
+  color: #831414;
+  border: 1px solid #e0b4b4;
 }
 
 .login__btn--secundario:hover {
-  background-color: #e8e8e8;
-}
-.loginContainer{
-  width:100%;
-  display:flex;
-  justify-content:center;
-  margin-top:40px;
+  background-color: #ebcaca;
 }
 
-.login{
-  background:white;
-  padding:30px;
-  border-radius:15px;
-  width:350px;
-  position:relative;
+.loginContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
 
-.cerrarLogin{
-  position:absolute;
-  top:10px;
-  right:15px;
-  border:none;
-  background:none;
-  font-size:18px;
-  cursor:pointer;
+.login {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 350px;
+  position: relative;
+}
+
+.cerrarLogin {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
 }

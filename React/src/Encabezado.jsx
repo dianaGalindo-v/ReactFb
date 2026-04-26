@@ -1,4 +1,4 @@
-import logoBag from './assets/logoBag.png';
+import logo from './assets/logo.png';
 import facebook from './assets/facebook.png';
 import instagram from './assets/instagram.png';
 import gmail from './assets/gmail.png';
@@ -19,7 +19,7 @@ function Encabezado({ setVista }) {
 function Logo() {
     return (
         <div className="LogoDiv">
-            <img src={logoBag} alt="Logo Maison Bag" />
+            <img src={logo} alt="Logo Futbol" />
         </div>
     );
 }

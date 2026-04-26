@@ -16,7 +16,7 @@
     height: 350px;
     background-size: cover;
     background-position: center;
-    opacity: 0.25;
+    opacity: 0.50;
     z-index: 0;
 	margin-top: 20px;
 }
@@ -44,7 +44,7 @@
 /* TARJETA */
 .tarjeta{
     flex: 0 0 220px;
-    background: rgba(255,255,255,0.9);
+    background: rgba(145, 3, 3, 0.9);
     border-radius: 12px;
     padding: 14px;
     text-align: center;
@@ -67,11 +67,12 @@
 
 .tarjeta h3{
     margin: 6px 0;
+    color: #ffffff;
 }
 
 .tarjeta p{
     font-size: 0.9rem;
-    color: #444;
+    color: #ffffff;
 }
 
 /* ===== PROMOCIONES ===== */
@@ -84,7 +85,7 @@
     margin: 60px auto;
     border-radius: 2px;
     overflow: hidden;
-    background: #f3f3f3;
+    background: #b70303;
 	margin-top: 120px;
 }
 
@@ -117,6 +118,6 @@
 .promoContent p{
     max-width: 600px;
     font-size: 1rem;
-    color: #333;
+    color: #ffffff;
 }
 

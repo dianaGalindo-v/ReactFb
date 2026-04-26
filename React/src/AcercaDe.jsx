@@ -4,27 +4,25 @@ import './AcercaDe.css';
 function AcercaDe() {
     return (
         <div className="vista">
-            <h2>Acerca de Maison Bag</h2>
+            <h2>Acerca de FutStyle</h2>
             <p>
-                Maison Bag nace con la idea de crear bolsos que combinen elegancia,
-                minimalismo y las últimas tendencias de la moda.
-                Nuestra marca se inspira en un estilo limpio y sofisticado,
-                pensado para acompañar cualquier ocasión.
+                En FutStyle, el futbol no es solo un deporte, es una forma de vida. 
+                Nacemos de la pasión por el juego, de la emoción que se vive en cada 
+                jugada y del estilo que se lleva dentro y fuera de la cancha.
             </p>
             <p>
-                Cada diseño está cuidadosamente planeado para personas que buscan
-                estilo sin exceso, priorizando la funcionalidad, la comodidad y
-                la estética. Creemos que un bolso no solo es un accesorio,
-                sino una extensión de la personalidad.
+                Somos una marca dedicada a quienes entienden que el futbol es mas quienes
+                90 minutos: es identidad, actitud y esencia. Por eso, ofrecemos una selección
+                de productos que combinan calidad, diseño y autenticidad, desde jerseys y balones, 
+                hasta accesorios y prendas que reflejan el verdadero espiritu futbolero.
             </p>
             <p>
-                En Maison Bag trabajamos con una paleta de colores neutros,
-                materiales seleccionados y detalles sutiles que hacen de cada
-                pieza un producto atemporal. Nuestro objetivo es ofrecer bolsos
-                versátiles que se adapten tanto al día a día como a momentos especiales.
+                Cada detalle en FutStyle está pensado para acompañarte en tu dia a dia, dentro y
+                fuera del campo, brindándote no solo productos, sino una experiencia que conecta
+                contigo y con tu pasión.
             </p>
             <p className="frase">
-                Maison Bag: simplicidad, elegancia y estilo en cada detalle.
+                FutStyle - Para quienes el futbol es parte de su esencia
             </p>
         </div>
     );

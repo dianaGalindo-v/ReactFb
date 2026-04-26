@@ -1,17 +1,17 @@
 h1, h2 {
-    color: #222;
+    color: #9a0404;
     font-family: 'Poppins', sans-serif;
 }
 
 .Encabezado {
-    background-color: #c0bebe;
+    background-color: #620101;
     width: 100%;
-    box-sizing: border-box; /* evita que el padding aumente el ancho */
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 30px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(109, 103, 103, 0.05);
 }
 
 /* LOGO */
@@ -24,6 +24,7 @@ h1, h2 {
 .LogoDiv img {
     width: 90px;
     display: block;
+    filter: brightness(0) invert(1);
 }
 
 /* MENU */
@@ -49,10 +50,17 @@ h1, h2 {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.25s ease;
+    color: white; /* 👈 TEXTO BLANCO */
+}
+
+/* 👇 por si usas <a> dentro del menú */
+.MenuDiv li a {
+    color: white;
+    text-decoration: none;
 }
 
 .MenuDiv li:hover {
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgb(101, 5, 5);
 }
 
 /* REDES */
@@ -63,7 +71,6 @@ h1, h2 {
     gap: 15px;
 }
 
-/* ARREGLA EL UL DE REDES */
 .RedesDiv ul {
     display: flex;
     gap: 10px;
@@ -80,6 +87,7 @@ h1, h2 {
     width: 28px;
     height: auto;
     transition: transform 0.2s ease;
+    filter: brightness(0) invert(1);
 }
 
 .RedesDiv img:hover {

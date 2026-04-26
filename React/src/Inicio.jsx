@@ -1,8 +1,8 @@
 function Inicio() {
     return (
         <div>
-            <h2>Bienvenida a Maison Bag</h2>
-            <p>Bolsos minimalistas en tendencia y estilo aesthetic.</p>
+            <h2>Bienvenida a FutStyle</h2>
+            <p>Espacio creado para quienes el futbol es parte de su escencia.</p>
         </div>
     );
 }
