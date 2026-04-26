@@ -1,35 +1,57 @@
-import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import { useState, useEffect } from "react";
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
 const containerStyle = {
-  width: '100%',
-  height: '350px'
+  width: "100%",
+  height: "350px"
 };
 
-function Mapa({ lat, lng, nombre_sucursal }) {
+function MapaGeolocalizacion() {
+  const [ubicacion, setUbicacion] = useState(null);
+  const [error, setError] = useState(null);
 
-  const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY
-  });
+  const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
-  if (loadError) return <div>Error al cargar el mapa</div>;
-  if (!isLoaded) return <div>Cargando mapa...</div>;
+  useEffect(() => {
+    if (!apiKey) {
+      setError("API Key no configurada");
+      return;
+    }
 
-  const center = { lat, lng };
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        setUbicacion({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        });
+      },
+      (error) => {
+        console.error(error);
+        setError("No se pudo obtener la ubicación");
+      },
+      { enableHighAccuracy: true }
+    );
+  }, [apiKey]);
+
+  if (error) {
+    return <div style={{padding: '20px', background: '#f0f0f0', borderRadius: '8px', textAlign: 'center'}}>
+      ⚠️ {error}
+    </div>;
+  }
 
   return (
-    <div>
-      <h2>{nombre_sucursal}</h2>
-
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={16}
-      >
-        <Marker position={center} />
-      </GoogleMap>
-
-    </div>
+    <LoadScript googleMapsApiKey={apiKey || "dummy"}>
+      {ubicacion && (
+        <GoogleMap
+          mapContainerStyle={containerStyle}
+          center={ubicacion}
+          zoom={15}
+        >
+          <Marker position={ubicacion} />
+        </GoogleMap>
+      )}
+    </LoadScript>
   );
 }
 
-export default Mapa;
+export default MapaGeolocalizacion;

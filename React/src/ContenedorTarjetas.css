@@ -1,107 +1,122 @@
-/* Fondo general estilo Champions */
-body{
-	background: linear-gradient(135deg,#f63434,#eb0e0e,#9c0303);
-	min-height: 100vh;
-	margin:0;
-	font-family: sans-serif; 
-}
-
-
-/* CONTENEDOR PRINCIPAL */
+/* CONTENEDOR GENERAL */
 .ContenedorTarjetas{
-	height: auto;                     /* <- quitamos altura fija */
-	width: 90%;
-	max-width: 1200px;                /* <- limita tamaño */
-	margin: 40px auto;
-	box-sizing: border-box;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: rgba(255,255,255,0.06);
-	border-radius: 14px;
-	backdrop-filter: blur(6px);
-	padding: 20px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
 }
 
+/* ===== FONDO TARJETAS ===== */
+.fondoImagen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+    z-index: 0;
+	margin-top: 20px;
+}
 
-/* Wrapper interno */
+/* ===== TARJETAS ===== */
 .tarjetasWrapper{
-	width: 100%;
-	box-sizing: border-box;
+    position: relative;
+    width: 95%;
+    max-width: 1500px;
+    margin-top: 40px;
+    z-index: 2;
 }
 
-
-/* Scroll horizontal */
 .contenedorHorizontal{
-	width: 100%;
-	overflow-x: auto;
+    width: 100%;
+    overflow-x: auto;
 }
 
-
-/* FILA DE TARJETAS */
 .tarjetas{
-	display: flex;
-	gap: 20px;
-	width: 100%;
-	align-items: stretch;
-	justify-content: flex-start;
-	flex-wrap: nowrap;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
 }
-
 
 /* TARJETA */
 .tarjeta{
-	flex: 0 0 260px;          /* tamaño fijo controlado */
-	max-width: 260px;
-	background: linear-gradient(180deg,#f42323,#0a0f2c);
-	color: white;
-	border-radius: 12px;
-	box-shadow: 0 6px 16px rgba(0,0,0,0.35);
-	padding: 14px;
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-}
-
-
-/* IMAGEN CONTROLADA */
-.tarjeta img{
-	width: 100%;
-	height: 140px;          /* <- controla crecimiento */
-	object-fit: cover;
-	border-radius: 8px;
-	margin-bottom: 10px;
-}
-
-
-/* TEXTO */
-.tarjeta p{
-	color: #d6dcff;
-}
-
-
-/* RESPONSIVE */
-@media (max-width: 800px){
-	.tarjeta{
-		flex: 0 0 220px;
-	}
-}
-
-@media (max-width: 420px){
-	.tarjeta{
-		flex: 0 0 80%;
-	}
-}
-
-
-/* ANIMACION */
-.tarjeta{
-	transition: transform .25s ease, box-shadow .25s ease;
+    flex: 0 0 220px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 12px;
+    padding: 14px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tarjeta:hover{
-	transform: translateY(-12px) scale(1.03);
-	box-shadow: 0 14px 28px rgba(0,0,0,0.45);
+    transform: translateY(-8px);
+    box-shadow: 0 16px 30px rgba(0,0,0,0.25);
 }
+
+.tarjeta img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.tarjeta h3{
+    margin: 6px 0;
+}
+
+.tarjeta p{
+    font-size: 0.9rem;
+    color: #444;
+}
+
+/* ===== PROMOCIONES ===== */
+.promoSection{
+    position: relative;
+    width: 100%;
+	height: 350px;
+    max-width: 1700px;
+    min-height: 230px; 
+    margin: 60px auto;
+    border-radius: 2px;
+    overflow: hidden;
+    background: #f3f3f3;
+	margin-top: 120px;
+}
+
+.promoBackground{
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+    z-index: 1;
+}
+
+.promoContent{
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.promoContent h2{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.promoContent p{
+    max-width: 600px;
+    font-size: 1rem;
+    color: #333;
+}
+

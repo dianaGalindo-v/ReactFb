@@ -1,90 +1,144 @@
-/* CONTENEDOR GENERAL */
-.ProductosDiv {
-  padding: 30px 40px;
-  background: radial-gradient(circle at top, #f61616, #600707);
-  min-height: 100vh;
+.vista {
+  width: 90vw;
+  max-width: 1400px;
+  margin: 50px auto;
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  box-sizing: border-box;
 }
 
 /* TITULO */
-.ProductosDiv h1 {
+.vista h2 {
   text-align: center;
-  color: #ffffff;
-  font-size: 2.2rem;
-  margin-bottom: 30px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 600;
+  color: #1f1f1f;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
 }
 
-/* GRID TIPO PINTEREST (pero ordenado) */
-.productos-grid {
+/* DESCRIPCIÓN */
+.descripcion {
+  text-align: center;
+  color: #555;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+
+/* GRID */
+.productosGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 16px;
-  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 35px;
 }
 
 /* CARD */
-.producto-card {
-  position: relative;
+.productoCard {
+  background: #ffffff;
   border-radius: 16px;
-  overflow: hidden;
-  cursor: pointer;
-  background: #fb0b0b;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-/* IMAGEN COMPLETA (como te gusta) */
-.producto-card img {
-  width: 100%;
-  height: 220px;          /* tamaño equilibrado */
-  object-fit: cover;      /* se ve pro */
-  display: block;
-}
-
-/* INFO (overlay elegante) */
-.producto-card h3 {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin: 0;
-  padding: 10px;
-  font-size: 0.9rem;
-  color: white;
-  background: linear-gradient(
-    to top,
-    rgba(2, 6, 23, 0.95),
-    rgba(2, 6, 23, 0.4),
-    transparent
-  );
+  padding: 22px;
   text-align: center;
-  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-/* EFECTO HOVER ESTILO CHAMPIONS */
-.producto-card:hover {
-  transform: scale(1.04);
-  box-shadow:
-    0 0 15px rgba(0, 119, 255, 0.7),
-    0 10px 30px rgba(0, 0, 0, 0.7);
+.productoCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* IMAGEN */
+.productoCard img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+
+/* TITULO */
+.productoCard h3 {
+  font-size: 15px;
+  color: #1f1f1f;
+  font-weight: 500;
+  margin-bottom: 10px;
+  min-height: 40px;
+}
+
+/* PRECIO */
+.productoCard p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f3d2b;
+  margin-bottom: 15px;
+}
+
+/* CONTENEDOR DE BOTONES */
+.productoBotones {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+}
+
+/* BOTONES GENERALES */
+.productoBotones button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* BOTON CARRITO */
+.btnCarrito {
+  background-color: #1f3d2b;
+  color: white;
+}
+
+.btnCarrito:hover {
+  background-color: #2e5c43;
+  transform: translateY(-2px);
+}
+
+/* BOTON EDITAR */
+.btnEditar {
+  background-color: #ffffff;
+  border: 2px solid #1f3d2b;
+  color: #1f3d2b;
+}
+
+.btnEditar:hover {
+  background-color: #1f3d2b;
+  color: white;
+}
+
+/* BOTON ELIMINAR */
+.btnEliminar {
+  background-color: #b93a3a;
+  color: white;
+}
+
+.btnEliminar:hover {
+  background-color: #8e2b2b;
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
-  .productos-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+@media (max-width: 768px) {
+
+  .vista {
+    padding: 25px 15px;
   }
 
-  .producto-card img {
-    height: 200px;
-  }
-}
-
-@media (max-width: 500px) {
-  .ProductosDiv {
-    padding: 20px;
+  .productosGrid {
+    gap: 20px;
   }
 
-  .producto-card img {
-    height: 180px;
+  .productoCard img {
+    height: 170px;
   }
+
 }

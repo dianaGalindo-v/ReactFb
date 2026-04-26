@@ -1,8 +1,8 @@
-function Inicio() { 
-    return(
+function Inicio() {
+    return (
         <div>
-            <h2>interfaz</h2>
-            <p>hdgufdguf</p>
+            <h2>Bienvenida a Maison Bag</h2>
+            <p>Bolsos minimalistas en tendencia y estilo aesthetic.</p>
         </div>
     );
 }

@@ -1,79 +1,79 @@
-import "./Sucursales.css";
-import Clima from "./Clima"; 
+import './Sucursales.css';
 
-import santiago from "./assets/santiago.jpg";
-import cap from "./assets/cap.jpg";
-import anfild from "./assets/anfild.jpg";
+function Sucursales() {
 
-const lista = [
-  {
-    nombre: "Santiago Bernabéu",
-    ciudad: "Madrid, España",
-    capacidad: "81,044 espectadores",
-    ano: "1947",
-    img: santiago,
-    lat: 40.4531,
-    lng: -3.6883,
-    mapa: "https://maps.google.com/?q=Santiago+Bernabeu"
-  },
-  {
-    nombre: "CAP Stadium",
-    ciudad: "Portugal",
-    capacidad: "50,000 espectadores",
-    ano: "2003",
-    img: cap,
-    lat: 38.7223,
-    lng: -9.1393,
-    mapa: "https://maps.google.com/?q=Portugal"
-  },
-  {
-    nombre: "Anfield",
-    ciudad: "Liverpool, Inglaterra",
-    capacidad: "53,394 espectadores",
-    ano: "1884",
-    img: anfild,
-    lat: 53.4308,
-    lng: -2.9608,
-    mapa: "https://maps.google.com/?q=Anfield"
-  }
-];
+    const sucursales = [
+        {
+            nombre: "Ciudad de México",
+            direccion: "Av. Reforma 123, Centro",
+            telefono: "(55) 1234 5678",
+            lat: 19.4326,
+            lng: -99.1332
+        },
+        {
+            nombre: "Guadalajara",
+            direccion: "Av. Vallarta 456, Zona Norte",
+            telefono: "(33) 9876 5432",
+            lat: 20.6597,
+            lng: -103.3496
+        },
+        {
+            nombre: "Monterrey",
+            direccion: "Paseo Santa Lucía 789",
+            telefono: "(81) 4567 8901",
+            lat: 25.6866,
+            lng: -100.3161
+        },
+        {
+            nombre: "Querétaro",
+            direccion: "Plaza de Armas",
+            telefono: "(44) 2139 6468",
+            lat: 20.5888,
+            lng: -100.3899
+        }
+    ];
 
-function Sucursales(){
-  return (
-    <div className="suc-container">
+    return (
+        <div className="sucursalesContainer">
 
-      <h1 className="suc-titulo">
-        Sedes Champions League 🏆
-      </h1>
+            <h2 className="tituloSucursales">Nuestras Sucursales</h2>
 
-      <div className="suc-grid">
+            <p className="introSucursales">
+                Visítanos y vive la experiencia de nuestra colección en persona.
+                Descubre nuestros diseños exclusivos y recibe asesoría personalizada.
+            </p>
 
-        {lista.map((s, i) => (
-          <div className="suc-card" key={i}>
+            <div className="sucursalesGrid">
 
-            <img src={s.img} alt={s.nombre} className="suc-img"/>
+                {sucursales.map((sucursal, index) => (
+                    <div className="sucursalCard" key={index}>
 
-            <div className="suc-info">
-              <h2>{s.nombre}</h2>
+                        <h3>{sucursal.nombre}</h3>
+                        <p>📍 {sucursal.direccion}</p>
+                        <p>📞 {sucursal.telefono}</p>
+                        <p>🕒 Lunes a Viernes: 10:00 am – 8:00 pm</p>
+                        <p>🕒 Sábados: 11:00 am – 6:00 pm</p>
 
-              <p>📍 {s.ciudad}</p>
-              <p>👥 {s.capacidad}</p>
-              <p>🏗 {s.ano}</p>
+                        <div style={{
+                            marginTop: '10px',
+                            padding: '10px',
+                            background: '#f0f0f0',
+                            borderRadius: '5px',
+                            fontSize: '12px'
+                        }}>
+                            📌 Coordenadas: {sucursal.lat.toFixed(4)}, {sucursal.lng.toFixed(4)}
+                        </div>
 
-              {/* 🔥 CLIMA DENTRO DE LA CARD */}
-              <Clima lat={s.lat} lng={s.lng} />
+                    </div>
+                ))}
 
-              <a href={s.mapa} target="_blank" rel="noreferrer">
-                Ver ubicación 📍
-              </a>
             </div>
 
-          </div>
-        ))}
-
-      </div>
-    </div>
-  );
+        </div>
+    );
 }
 
 export default Sucursales;
+
+
+

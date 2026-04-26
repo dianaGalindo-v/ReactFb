@@ -1,52 +1,48 @@
+import Encabezado from "./Encabezado";
+import ContenedorTarjetas from "./ContenedorTarjetas";
+import Promociones from "./Promociones";
+import Footer from "./Footer";
+import Login from "./Login";
+import Registro from "./Registro";
+import Categorias from "./Categorias";
 import { useState } from "react";
-import Encabezado from './Encabezado.jsx';
-import ContenedorTarjetas from './ContenedorTarjetas';
-import Footer from './Footer';
-import BannerSuave from './BannerSuave';
-import Productos from "./Productos";
-import Comentarios from "./Comentarios";
-import Sucursales from "./Sucursales";
-import Acerca from "./Acerca";
-import Jugadores from "./Jugadores";
-import Favoritos from "./Favoritos.jsx";
-import Usuario from "./UsuariosTabla.jsx";
+import { AuthProvider } from "./AuthContext";
 
-function App(){
+function App() {
 
-  const [seccion, setSeccion] = useState("inicio");
+  const [vista, setVista] = useState("Inicio");
 
-  return(
-    <>
-      <Encabezado onCambiar={setSeccion} />
+  return (
+    <AuthProvider>
 
-      {/* --------- CONTENIDO DINÁMICO --------- */}
+      <div className="appContainer">
 
-      {seccion === "inicio" && (
-        <>
-          <ContenedorTarjetas />
-          <BannerSuave />
-          <Footer />
-        </>
-      )}
+        {/* MENÚ SUPERIOR */}
+        <Encabezado setVista={setVista} />
 
-      {seccion === "acerca" && <Acerca />}
+        {/* CONTENIDO PRINCIPAL */}
+        <div className="contenido">
 
+          <ContenedorTarjetas vista={vista} />
 
-      {seccion === "productos" && <Productos />}
+          {vista === "Login" && <Login setVista={setVista} />}
 
+          {vista === "Registro" && (
+            <Registro volverLogin={() => setVista("Login")} />
+          )}
+          
+          {vista === "Categoria" && <Categorias />
+          }
+        </div>
 
-      {seccion === "comentarios" && <Comentarios />}
+        {vista === "Inicio" && <Promociones />}
 
+        {/* PIE DE PÁGINA */}
+        <Footer />
 
-      {seccion === "sucursales" && <Sucursales />}
+      </div>
 
-      {seccion === "Jugadores" && <Jugadores />}
-
-      {seccion === "favoritos" && <Favoritos />}
-
-      {seccion === "usuarios" && <Usuario />}
-
-    </>
+    </AuthProvider>
   );
 }
 

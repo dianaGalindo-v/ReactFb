@@ -1,9 +1,9 @@
 import './Footer.css';
 
-function Footer(){
-    return(
+function Footer() {
+    return (
         <footer className="footer">
-            <p>© 2026 — ReactFb |    Emanuel Santos y Diana Galindo</p>
+            <p>© 2026 Maison Bag. Todos los derechos reservados.</p>
         </footer>
     );
 }

@@ -1,56 +1,70 @@
-import uefa from './assets/uefa.png';
+import logoBag from './assets/logoBag.png';
 import facebook from './assets/facebook.png';
 import instagram from './assets/instagram.png';
 import gmail from './assets/gmail.png';
 import tiktok from './assets/tik-tok.png';
 import './Encabezado.css';
-import Clima from './Clima';
+import { useAuth } from './AuthContext';
 
-function Encabezado({ onCambiar }){
+function Encabezado({ setVista }) {
     return (
         <div className="Encabezado">
             <Logo />
-            <Menu onCambiar={onCambiar} />
+            <Menu setVista={setVista} />
             <Redes />
         </div>
     );
 }
 
-function Logo(){
+function Logo() {
     return (
         <div className="LogoDiv">
-            <img src={uefa} alt="React Logo" />
+            <img src={logoBag} alt="Logo Maison Bag" />
         </div>
     );
 }
 
-function Menu({ onCambiar }){
+function Menu({ setVista }) {
+
+    const { isLoggedIn, role, logout } = useAuth();
+    const isAdmin = role === 'admin';
+
     return (
         <div className="MenuDiv">
             <ul>
-                <li><button onClick={() => onCambiar("inicio")}>Inicio</button></li>
-                <li><button onClick={() => onCambiar("acerca")}>Acerca de</button></li>
-                <li><button onClick={() => onCambiar("productos")}>Productos</button></li>
-                <li><button onClick={() => onCambiar("favoritos")}>Favoritos</button></li>
-                <li><button onClick={() => onCambiar("Jugadores")}>Jugadores</button></li>
-                <li><button onClick={() => onCambiar("sucursales")}>Sucursales</button></li>
-                <li><button onClick={() => onCambiar("usuarios")}>Usuarios</button></li>
-                <li><button onClick={() => onCambiar("comentarios")}>Comentarios</button></li>
+
+                <li onClick={() => setVista("Inicio")}>Inicio</li>
+                <li onClick={() => setVista("AcercaDe")}>Acerca de</li>
+                <li onClick={() => setVista("Galeria")}>Galería</li>
+                <li onClick={() => setVista("Sucursales")}>Sucursales</li>
+                <li onClick={() => setVista("Productos")}>Productos</li>
+                <li onClick={() => setVista("Contactos")}>Contacto</li>
+                {isLoggedIn ? (
+                    <>
+                        <li onClick={() => setVista("Categoria")}>Categorías</li>
+                        <li onClick={() => setVista("Carrito")}>Carrito</li>
+                        {isAdmin && (
+                          <li onClick={() => setVista("Usuarios")}>Usuarios</li>
+                        )}
+                        <li onClick={logout}>Cerrar sesión</li>
+                    </>
+                ) : (
+                    <li onClick={() => setVista("Login")}>Login</li>
+                )}
+
             </ul>
-            <Clima />
-        </div>    
+        </div>
     );
 }
 
-
-function Redes(){
+function Redes() {
     return (
         <div className="RedesDiv">
             <ul>
-                <li className="redes"><a href='#'><img src={facebook} alt="Facebook" /></a></li> 
-                <li className="redes"><a href='#'><img src={instagram} alt="Instagram" /></a></li>
-                <li className="redes"><a href='#'><img src={gmail} alt="Gmail" /></a></li>
-                <li className="redes"><a href='#'><img src={tiktok} alt="TikTok" /></a></li>
+                <li><img src={facebook} alt="Facebook" /></li>
+                <li><img src={instagram} alt="Instagram" /></li>
+                <li><img src={gmail} alt="Gmail" /></li>
+                <li><img src={tiktok} alt="TikTok" /></li>
             </ul>
         </div>
     );

@@ -1,101 +1,87 @@
-h2{
-    color: rgb(255, 255, 255);
+h1, h2 {
+    color: #222;
+    font-family: 'Poppins', sans-serif;
 }
 
-h1{
-    color: rgb(255, 255, 255);
-}
-
-/* ===== NAVBAR ===== */
-.Encabezado{
-    background-color: rgb(255, 34, 34);
+.Encabezado {
+    background-color: #c0bebe;
     width: 100%;
+    box-sizing: border-box; /* evita que el padding aumente el ancho */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 5%;
+    padding: 10px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* ===== LOGO ===== */
-.LogoDiv{
+/* LOGO */
+
+.LogoDiv {
     display: flex;
     align-items: center;
 }
 
-.LogoDiv img{
+.LogoDiv img {
     width: 90px;
+    display: block;
 }
 
-/* ===== MENU ===== */
-.MenuDiv{
+/* MENU */
+
+.MenuDiv {
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
 }
 
-.MenuDiv ul{
+.MenuDiv ul {
     list-style: none;
     display: flex;
-    gap: 60px;
+    gap: 20px;
+    font-size: 17px;
+    font-weight: 600;
     padding: 0;
     margin: 0;
 }
 
-.MenuDiv li{
-    list-style: none;
-}
-
-.MenuDiv a{
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: 600;
-    color: white;
-    padding: 0;              
-    border-radius: 0;        
-    transition: opacity 0.3s ease;
-}
-
-.MenuDiv a:hover{
-    opacity: 0.7;          
-}
-/* Quitamos estilo nativo del botón */
-.MenuDiv button {
-    background: none;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
+.MenuDiv li {
+    padding: 6px 10px;
+    border-radius: 10px;
     cursor: pointer;
-    padding: 0;
-    transition: opacity 0.3s ease;
+    transition: background-color 0.25s ease;
 }
 
-/* Hover elegante tipo menú gris */
-.MenuDiv button:hover {
-    opacity: 0.7;
+.MenuDiv li:hover {
+    background-color: rgba(0,0,0,0.05);
 }
-/* ===== REDES ===== */
-.RedesDiv{
+
+/* REDES */
+
+.RedesDiv {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     gap: 15px;
 }
 
-.RedesDiv ul{
-    list-style: none;
+/* ARREGLA EL UL DE REDES */
+.RedesDiv ul {
     display: flex;
-    gap: 15px;
+    gap: 10px;
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.RedesDiv img{
-    width: 32px;
-    transition: transform 0.3s ease;
+.RedesDiv li {
+    list-style: none;
 }
 
-.RedesDiv img:hover{
+.RedesDiv img {
+    width: 28px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.RedesDiv img:hover {
     transform: scale(1.1);
 }

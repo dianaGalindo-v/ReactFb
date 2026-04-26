@@ -1,54 +1,69 @@
 import './ContenedorTarjetas.css';
-import live from './assets/live.jpg';
-import taco2 from './assets/taco2.jpg';
-import balo from './assets/balo.jpg';
-import man from './assets/man.jpg';
 
-function ContenedorTarjetas(){
-    return(
+// imágenes
+import bandolera from './assets/bandolera.jpg';
+import wine from './assets/wine.jpg';
+import longvoyage from './assets/longvoyage.jpg';
+import jwpei from './assets/jwpei.jpg';
+import fondoBolso from './assets/fondo-bolso.jpg';
+
+// vistas
+import Galeria from './Galeria';
+import Productos from './Productos';
+import Contactos from './Contactos';
+import Sucursales from './Sucursales';
+import AcercaDe from './AcercaDe';
+import Usuario from './UsuariosTabla';
+import Carrito from './Carrito';
+
+function ContenedorTarjetas({ vista }) {
+
+    const vistas = {
+        "Galeria": <Galeria />,
+        "Productos": <Productos />,
+        "Contactos": <Contactos />,
+        "Sucursales": <Sucursales />,
+        "AcercaDe": <AcercaDe />,
+        "Usuarios": <Usuario />,
+        "Carrito": <Carrito />
+    };
+
+    // 👉 SI NO ES INICIO, MOSTRAMOS OTRA VISTA
+    if (vista !== "Inicio") {
+        return (
+            <div className="vistaExtra">
+                {vistas[vista]}
+            </div>
+        );
+    }
+
+    // 👉 INICIO (tarjetas + promociones)
+    return (
         <div className="ContenedorTarjetas">
 
+            {/* Fondo */}
+            <div
+                className="fondoImagen"
+                style={{ backgroundImage: `url(${fondoBolso})` }}
+            ></div>
+
+            {/* TARJETAS */}
             <div className="tarjetasWrapper">
-                <div className="contenedorHorizontal">
-                    <div className="tarjetas">
-
-                        <Tarjeta 
-                            img={live}
-                            titulo="Liverpool"
-                            texto="Jersey Rojo"
-                        />
-
-                        <Tarjeta 
-                            img={taco2}
-                            titulo="NIKE C"
-                            texto="Tacos"
-                        />
-
-                        <Tarjeta 
-                            img={balo}
-                            titulo="Nike Balón"
-                            texto="Balón"
-                        />
-
-                        <Tarjeta 
-                            img={man}
-                            titulo="Liverpool"
-                            texto="Jersey Azul"
-                        />
-
-                    </div>
+                <div className="tarjetas">
+                    <Tarjeta imagen={bandolera} titulo="Bandolera" texto="Diseño minimalista en tendencia" />
+                    <Tarjeta imagen={wine} titulo="Wine" texto="Ideal para ocasiones especiales" />
+                    <Tarjeta imagen={longvoyage} titulo="Longvoyage" texto="Espaciosa y elegante" />
+                    <Tarjeta imagen={jwpei} titulo="JW Pei" texto="Estilo urbano" />
                 </div>
             </div>
-
         </div>
     );
 }
 
-
-function Tarjeta({img, titulo, texto}){
-    return(
+function Tarjeta({ imagen, titulo, texto }) {
+    return (
         <div className="tarjeta">
-            <img src={img} alt={titulo} />
+            <img src={imagen} alt={titulo} />
             <h3>{titulo}</h3>
             <p>{texto}</p>
         </div>
